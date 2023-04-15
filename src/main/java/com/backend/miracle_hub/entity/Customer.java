@@ -22,15 +22,20 @@ public class Customer {
     private String name;
     @Column(name = "email", columnDefinition = "VARCHAR(40)", nullable = false)
     private String email;
+    @Column(name = "password", columnDefinition = "VARCHAR(40)", nullable = false)
+    private String password;
     @Column(name = "cPhone", columnDefinition = "INT")
     private int phone;
     @Column(name = "regDate", columnDefinition = "DATE")
     private String date;
 
+    @Column(name = "dob", columnDefinition = "DATE")
+    private String dob;
+
     public enum Gender { M,F }
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "gender", columnDefinition = "ENUM('M','F')", nullable = true)
+    @Column(name = "gender", columnDefinition = "ENUM('M','F','O')", nullable = true)
     private Gender gender;
 
 

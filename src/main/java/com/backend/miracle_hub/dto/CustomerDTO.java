@@ -15,10 +15,12 @@ public class CustomerDTO {
     private int id;
     private String name;
     private String email;
+    private String password;
     private int phone;
     private String date;
+    private String dob;
 
-    public enum Gender { M,F }
+    public enum Gender { M,F,O }
 
     @Enumerated(EnumType.STRING)
     private Customer.Gender gender;
